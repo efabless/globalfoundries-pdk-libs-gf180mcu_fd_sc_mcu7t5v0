@@ -35,4 +35,4 @@ output ZN;
 	and MGM_BG_2( ZN, A1_inv_for_gf180mcu_fd_sc_mcu7t5v0__nor2_2, A2_inv_for_gf180mcu_fd_sc_mcu7t5v0__nor2_2 );
 
 endmodule
-`endif
+`endif // GF180MCU_FD_SC_MCU7T5V0__NOR2_V

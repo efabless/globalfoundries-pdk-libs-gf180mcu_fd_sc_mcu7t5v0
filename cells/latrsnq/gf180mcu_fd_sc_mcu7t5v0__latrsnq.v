@@ -33,4 +33,4 @@ output Q;
 	buf MGM_BG_2( Q, IQ2 );
 
 endmodule
-`endif
+`endif // GF180MCU_FD_SC_MCU7T5V0__LATRSNQ_V

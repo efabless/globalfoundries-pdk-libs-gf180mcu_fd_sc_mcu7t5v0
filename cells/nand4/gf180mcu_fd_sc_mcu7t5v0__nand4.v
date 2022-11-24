@@ -43,4 +43,4 @@ output ZN;
 	or MGM_BG_4( ZN, A1_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand4_4, A2_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand4_4, A3_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand4_4, A4_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand4_4 );
 
 endmodule
-`endif
+`endif // GF180MCU_FD_SC_MCU7T5V0__NAND4_V

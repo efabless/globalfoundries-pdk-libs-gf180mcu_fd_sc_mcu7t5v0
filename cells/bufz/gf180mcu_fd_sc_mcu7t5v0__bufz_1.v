@@ -10,6 +10,7 @@
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
+// limitations under the License.
 
 `ifndef GF180MCU_FD_SC_MCU7T5V0__BUFZ_1_V
 `define GF180MCU_FD_SC_MCU7T5V0__BUFZ_1_V
@@ -56,4 +57,4 @@ output Z;
    `endif
 
 endmodule
-`endif
+`endif // GF180MCU_FD_SC_MCU7T5V0__BUFZ_1_V

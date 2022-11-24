@@ -27,4 +27,4 @@ output Z;
 	buf MGM_BG_0( Z, I );
 
 endmodule
-`endif
+`endif // GF180MCU_FD_SC_MCU7T5V0__CLKBUF_V

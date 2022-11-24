@@ -47,4 +47,4 @@ output ZN;
 	or MGM_BG_5( ZN, ZN_row1, B_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai31_4 );
 
 endmodule
-`endif
+`endif // GF180MCU_FD_SC_MCU7T5V0__OAI31_V

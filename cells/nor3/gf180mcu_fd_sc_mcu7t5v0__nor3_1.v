@@ -10,6 +10,7 @@
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
+// limitations under the License.
 
 `ifndef GF180MCU_FD_SC_MCU7T5V0__NOR3_1_V
 `define GF180MCU_FD_SC_MCU7T5V0__NOR3_1_V
@@ -17,18 +18,18 @@
 `include gf180mcu_fd_sc_mcu7t5v0__nor3.v
 
 `ifdef USE_POWER_PINS
-module gf180mcu_fd_sc_mcu7t5v0__nor3_2( ZN, A3, A2, A1, VDD, VSS );
+module gf180mcu_fd_sc_mcu7t5v0__nor3_1( A3, ZN, A2, A1, VDD, VSS );
 inout VDD, VSS;
 `else // If not USE_POWER_PINS
-module gf180mcu_fd_sc_mcu7t5v0__nor3_2( ZN, A3, A2, A1 );
+module gf180mcu_fd_sc_mcu7t5v0__nor3_1( A3, ZN, A2, A1 );
 `endif // If not USE_POWER_PINS
 input A1, A2, A3;
 output ZN;
 
 `ifdef USE_POWER_PINS
-  gf180mcu_fd_sc_mcu7t5v0__nor3_func gf180mcu_fd_sc_mcu7t5v0__nor3_inst(.ZN(ZN),.A3(A3),.A2(A2),.A1(A1),.VDD(VDD),.VSS(VSS));
+  gf180mcu_fd_sc_mcu7t5v0__nor3_func gf180mcu_fd_sc_mcu7t5v0__nor3_inst(.A3(A3),.ZN(ZN),.A2(A2),.A1(A1),.VDD(VDD),.VSS(VSS));
 `else // If not USE_POWER_PINS
-  gf180mcu_fd_sc_mcu7t5v0__nor3_func gf180mcu_fd_sc_mcu7t5v0__nor3_inst(.ZN(ZN),.A3(A3),.A2(A2),.A1(A1));
+  gf180mcu_fd_sc_mcu7t5v0__nor3_func gf180mcu_fd_sc_mcu7t5v0__nor3_inst(.A3(A3),.ZN(ZN),.A2(A2),.A1(A1));
 `endif // If not USE_POWER_PINS
 
 `ifndef FUNCTIONAL
@@ -59,4 +60,4 @@ output ZN;
    `endif
 
 endmodule
-`endif
+`endif // GF180MCU_FD_SC_MCU7T5V0__NOR3_1_V

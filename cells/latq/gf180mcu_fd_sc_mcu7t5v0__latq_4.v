@@ -10,6 +10,7 @@
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
+// limitations under the License.
 
 `ifndef GF180MCU_FD_SC_MCU7T5V0__LATQ_4_V
 `define GF180MCU_FD_SC_MCU7T5V0__LATQ_4_V
@@ -17,10 +18,10 @@
 `include gf180mcu_fd_sc_mcu7t5v0__latq.v
 
 `ifdef USE_POWER_PINS
-module gf180mcu_fd_sc_mcu7t5v0__latq_1( E, D, Q, VDD, VSS );
+module gf180mcu_fd_sc_mcu7t5v0__latq_4( E, D, Q, VDD, VSS );
 inout VDD, VSS;
 `else // If not USE_POWER_PINS
-module gf180mcu_fd_sc_mcu7t5v0__latq_1( E, D, Q );
+module gf180mcu_fd_sc_mcu7t5v0__latq_4( E, D, Q );
 `endif // If not USE_POWER_PINS
 input D, E;
 output Q;
@@ -83,4 +84,4 @@ output Q;
    `endif
 
 endmodule
-`endif
+`endif // GF180MCU_FD_SC_MCU7T5V0__LATQ_4_V

@@ -10,6 +10,7 @@
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
+// limitations under the License.
 
 `ifndef GF180MCU_FD_SC_MCU7T5V0__AOI221_4_V
 `define GF180MCU_FD_SC_MCU7T5V0__AOI221_4_V
@@ -17,18 +18,18 @@
 `include gf180mcu_fd_sc_mcu7t5v0__aoi221.v
 
 `ifdef USE_POWER_PINS
-module gf180mcu_fd_sc_mcu7t5v0__aoi221_1( B2, B1, ZN, C, A2, A1, VDD, VSS );
+module gf180mcu_fd_sc_mcu7t5v0__aoi221_4( ZN, B2, B1, C, A1, A2, VDD, VSS );
 inout VDD, VSS;
 `else // If not USE_POWER_PINS
-module gf180mcu_fd_sc_mcu7t5v0__aoi221_1( B2, B1, ZN, C, A2, A1 );
+module gf180mcu_fd_sc_mcu7t5v0__aoi221_4( ZN, B2, B1, C, A1, A2 );
 `endif // If not USE_POWER_PINS
 input A1, A2, B1, B2, C;
 output ZN;
 
 `ifdef USE_POWER_PINS
-  gf180mcu_fd_sc_mcu7t5v0__aoi221_func gf180mcu_fd_sc_mcu7t5v0__aoi221_inst(.B2(B2),.B1(B1),.ZN(ZN),.C(C),.A2(A2),.A1(A1),.VDD(VDD),.VSS(VSS));
+  gf180mcu_fd_sc_mcu7t5v0__aoi221_func gf180mcu_fd_sc_mcu7t5v0__aoi221_inst(.ZN(ZN),.B2(B2),.B1(B1),.C(C),.A1(A1),.A2(A2),.VDD(VDD),.VSS(VSS));
 `else // If not USE_POWER_PINS
-  gf180mcu_fd_sc_mcu7t5v0__aoi221_func gf180mcu_fd_sc_mcu7t5v0__aoi221_inst(.B2(B2),.B1(B1),.ZN(ZN),.C(C),.A2(A2),.A1(A1));
+  gf180mcu_fd_sc_mcu7t5v0__aoi221_func gf180mcu_fd_sc_mcu7t5v0__aoi221_inst(.ZN(ZN),.B2(B2),.B1(B1),.C(C),.A1(A1),.A2(A2));
 `endif // If not USE_POWER_PINS
 
 `ifndef FUNCTIONAL
@@ -154,4 +155,4 @@ output ZN;
    `endif
 
 endmodule
-`endif
+`endif // GF180MCU_FD_SC_MCU7T5V0__AOI221_4_V

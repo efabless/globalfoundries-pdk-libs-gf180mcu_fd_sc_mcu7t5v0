@@ -27,4 +27,4 @@ output Z;
 	and MGM_BG_0( Z, A1, A2, A3, A4 );
 
 endmodule
-`endif
+`endif // GF180MCU_FD_SC_MCU7T5V0__AND4_V

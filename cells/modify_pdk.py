@@ -28,9 +28,10 @@ for cells in pdk_cells:
                     power = line
             elif line.startswith("endmodule"):
                 endmodule_line = num
+        pp_file.close()
 
         for num, line in enumerate(ref_file, 1):
-            if num < comment_line:
+            if num <= comment_line:
                 base_file.write(line)
             elif num == comment_line + 1:
                 base_file.write("\n")
@@ -46,15 +47,17 @@ for cells in pdk_cells:
                 base_file.write("`endif // If not USE_POWER_PINS\n")
             elif num <= endmodule_line:
                 base_file.write(line)
-        base_file.write("`endif\n")
+        base_file.write("`endif " + f"// GF180MCU_FD_SC_MCU7T5V0__{cells}_V\n".upper())
+        ref_file.close()
+        base_file.close()
 
         for i in range(0,len(beh_pp_file_path)):
             count = 0
-            beh_base_file_path = str(beh_file_path[i]).replace(".behavioral","")
+            beh_base_file_path = beh_pp_file_path[i].replace(".behavioral.pp","")
             beh_pp_file = open(beh_pp_file_path[i], "r")
             beh_file = open(beh_pp_file_path[i].replace(".pp",""), "r")
             beh_base_file = open(beh_base_file_path, "w")
-            cell_name = re.search(".*__(.*).b.*", str(beh_file_path[i])).group(1)
+            cell_name = re.search(".*__(.*).b.*", str(beh_pp_file_path[i])).group(1)
 
             for num, line in enumerate(beh_pp_file, 1):
                 if line.startswith("//"):
@@ -73,9 +76,10 @@ for cells in pdk_cells:
                     func_line = num
                 elif line.startswith("endmodule"):
                     endmodule_line = num
+            beh_pp_file.close()
             
             for num, line in enumerate(beh_file, 1):
-                if num < comment_line:
+                if num <= comment_line:
                     beh_base_file.write(line)
                 elif num == comment_line + 1:
                     beh_base_file.write("\n")
@@ -109,4 +113,6 @@ for cells in pdk_cells:
 
                 elif num <= endmodule_line and num >= begin_spec_line:
                     beh_base_file.write(line)
-            beh_base_file.write("`endif\n")
+            beh_base_file.write("`endif " + f"// GF180MCU_FD_SC_MCU7T5V0__{cell_name}_V\n".upper())
+            beh_file.close()
+            beh_base_file.close()

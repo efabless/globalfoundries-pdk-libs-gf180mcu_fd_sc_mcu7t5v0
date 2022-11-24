@@ -10,6 +10,7 @@
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
+// limitations under the License.
 
 `ifndef GF180MCU_FD_SC_MCU7T5V0__INVZ_3_V
 `define GF180MCU_FD_SC_MCU7T5V0__INVZ_3_V
@@ -17,18 +18,18 @@
 `include gf180mcu_fd_sc_mcu7t5v0__invz.v
 
 `ifdef USE_POWER_PINS
-module gf180mcu_fd_sc_mcu7t5v0__invz_2( EN, ZN, I, VDD, VSS );
+module gf180mcu_fd_sc_mcu7t5v0__invz_3( EN, I, ZN, VDD, VSS );
 inout VDD, VSS;
 `else // If not USE_POWER_PINS
-module gf180mcu_fd_sc_mcu7t5v0__invz_2( EN, ZN, I );
+module gf180mcu_fd_sc_mcu7t5v0__invz_3( EN, I, ZN );
 `endif // If not USE_POWER_PINS
 input EN, I;
 output ZN;
 
 `ifdef USE_POWER_PINS
-  gf180mcu_fd_sc_mcu7t5v0__invz_func gf180mcu_fd_sc_mcu7t5v0__invz_inst(.EN(EN),.ZN(ZN),.I(I),.VDD(VDD),.VSS(VSS));
+  gf180mcu_fd_sc_mcu7t5v0__invz_func gf180mcu_fd_sc_mcu7t5v0__invz_inst(.EN(EN),.I(I),.ZN(ZN),.VDD(VDD),.VSS(VSS));
 `else // If not USE_POWER_PINS
-  gf180mcu_fd_sc_mcu7t5v0__invz_func gf180mcu_fd_sc_mcu7t5v0__invz_inst(.EN(EN),.ZN(ZN),.I(I));
+  gf180mcu_fd_sc_mcu7t5v0__invz_func gf180mcu_fd_sc_mcu7t5v0__invz_inst(.EN(EN),.I(I),.ZN(ZN));
 `endif // If not USE_POWER_PINS
 
 `ifndef FUNCTIONAL
@@ -56,4 +57,4 @@ output ZN;
    `endif
 
 endmodule
-`endif
+`endif // GF180MCU_FD_SC_MCU7T5V0__INVZ_3_V

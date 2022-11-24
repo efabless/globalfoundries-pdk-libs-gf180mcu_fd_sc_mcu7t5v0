@@ -10,6 +10,7 @@
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
+// limitations under the License.
 
 `ifndef GF180MCU_FD_SC_MCU7T5V0__XOR3_4_V
 `define GF180MCU_FD_SC_MCU7T5V0__XOR3_4_V
@@ -17,10 +18,10 @@
 `include gf180mcu_fd_sc_mcu7t5v0__xor3.v
 
 `ifdef USE_POWER_PINS
-module gf180mcu_fd_sc_mcu7t5v0__xor3_1( A2, A1, A3, Z, VDD, VSS );
+module gf180mcu_fd_sc_mcu7t5v0__xor3_4( A2, A1, A3, Z, VDD, VSS );
 inout VDD, VSS;
 `else // If not USE_POWER_PINS
-module gf180mcu_fd_sc_mcu7t5v0__xor3_1( A2, A1, A3, Z );
+module gf180mcu_fd_sc_mcu7t5v0__xor3_4( A2, A1, A3, Z );
 `endif // If not USE_POWER_PINS
 input A1, A2, A3;
 output Z;
@@ -122,4 +123,4 @@ output Z;
    `endif
 
 endmodule
-`endif
+`endif // GF180MCU_FD_SC_MCU7T5V0__XOR3_4_V

@@ -35,4 +35,4 @@ output Q;
 	not MGM_BG_3( Q, IQ1 );
 
 endmodule
-`endif
+`endif // GF180MCU_FD_SC_MCU7T5V0__DFFNRNQ_V

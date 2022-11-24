@@ -33,4 +33,4 @@ output Q;
 	and MGM_BG_2( Q, CLK, IQ2 );
 
 endmodule
-`endif
+`endif // GF180MCU_FD_SC_MCU7T5V0__ICGTP_V
