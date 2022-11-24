@@ -15,7 +15,7 @@
 `ifndef GF180MCU_FD_SC_MCU7T5V0__DLYA_1_V
 `define GF180MCU_FD_SC_MCU7T5V0__DLYA_1_V
 
-`include "gf180mcu_fd_sc_mcu7t5v0__dlya.v"
+`include "gf180mcu_fd_sc_mcu7t5v0__dlya_func.v"
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu7t5v0__dlya_1( I, Z, VDD, VSS );

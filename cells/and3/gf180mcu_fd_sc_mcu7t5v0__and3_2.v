@@ -15,7 +15,7 @@
 `ifndef GF180MCU_FD_SC_MCU7T5V0__AND3_2_V
 `define GF180MCU_FD_SC_MCU7T5V0__AND3_2_V
 
-`include "gf180mcu_fd_sc_mcu7t5v0__and3.v"
+`include "gf180mcu_fd_sc_mcu7t5v0__and3_func.v"
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu7t5v0__and3_2( A1, A2, A3, Z, VDD, VSS );

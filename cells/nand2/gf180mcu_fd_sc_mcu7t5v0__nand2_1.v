@@ -15,7 +15,7 @@
 `ifndef GF180MCU_FD_SC_MCU7T5V0__NAND2_1_V
 `define GF180MCU_FD_SC_MCU7T5V0__NAND2_1_V
 
-`include "gf180mcu_fd_sc_mcu7t5v0__nand2.v"
+`include "gf180mcu_fd_sc_mcu7t5v0__nand2_func.v"
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu7t5v0__nand2_1( A2, A1, ZN, VDD, VSS );

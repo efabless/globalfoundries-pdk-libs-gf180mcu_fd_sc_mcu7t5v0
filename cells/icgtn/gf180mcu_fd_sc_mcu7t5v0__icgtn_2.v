@@ -15,7 +15,7 @@
 `ifndef GF180MCU_FD_SC_MCU7T5V0__ICGTN_2_V
 `define GF180MCU_FD_SC_MCU7T5V0__ICGTN_2_V
 
-`include "gf180mcu_fd_sc_mcu7t5v0__icgtn.v"
+`include "gf180mcu_fd_sc_mcu7t5v0__icgtn_func.v"
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu7t5v0__icgtn_2( TE, E, CLKN, Q, VDD, VSS );
