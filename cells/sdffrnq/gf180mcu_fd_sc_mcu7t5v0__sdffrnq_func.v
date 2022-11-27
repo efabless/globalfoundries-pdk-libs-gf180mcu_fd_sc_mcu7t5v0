@@ -15,6 +15,8 @@
 `ifndef GF180MCU_FD_SC_MCU7T5V0__SDFFRNQ_V
 `define GF180MCU_FD_SC_MCU7T5V0__SDFFRNQ_V
 
+`include "../udp/udp_primitives.v"
+
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu7t5v0__sdffrnq_func( SE, SI, D, CLK, RN, Q, VDD, VSS, notifier );
 inout VDD, VSS;
@@ -52,7 +54,7 @@ output Q;
 
 	or MGM_BG_7( MGM_D0, MGM_D0_row1, MGM_D0_row2, MGM_D0_row3 );
 
-	UDP_GF018hv5v_mcu_sc7_TT_1P8V_25C_verilog_nonpg_MGM_N_IQ_FF_UDP( IQ1, 1'b0, MGM_P0, CLK, MGM_D0, notifier );
+	gf180mcu_fd_sc_mcu7t5v0__N_IQ_FF_udp( IQ1, 1'b0, MGM_P0, CLK, MGM_D0, notifier );
 
 	not MGM_BG_8( Q, IQ1 );
 

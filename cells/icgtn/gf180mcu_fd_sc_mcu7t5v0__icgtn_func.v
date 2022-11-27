@@ -15,6 +15,8 @@
 `ifndef GF180MCU_FD_SC_MCU7T5V0__ICGTN_V
 `define GF180MCU_FD_SC_MCU7T5V0__ICGTN_V
 
+`include "../udp/udp_primitives.v"
+
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu7t5v0__icgtn_func( TE, E, CLKN, Q, VDD, VSS, notifier );
 inout VDD, VSS;
@@ -26,13 +28,13 @@ output Q;
 
 	or MGM_BG_0( MGM_D0, E, TE );
 
-	UDP_GF018hv5v_mcu_sc7_TT_1P8V_25C_verilog_nonpg_MGM_N_IQ_LATCH_UDP( IQ3, 1'b0, 1'b0, CLKN, MGM_D0, notifier );
+	gf180mcu_fd_sc_mcu7t5v0__N_IQ_LATCH_udp( IQ3, 1'b0, 1'b0, CLKN, MGM_D0, notifier );
 
-	wire IQ3_inv_for_gf180mcu_fd_sc_mcu7t5v0__icgtn_1;
+	wire IQ3_inv_for_gf180mcu_fd_sc_mcu7t5v0__icgtn_2;
 
-	not MGM_BG_1( IQ3_inv_for_gf180mcu_fd_sc_mcu7t5v0__icgtn_1, IQ3 );
+	not MGM_BG_1( IQ3_inv_for_gf180mcu_fd_sc_mcu7t5v0__icgtn_2, IQ3 );
 
-	or MGM_BG_2( Q, CLKN, IQ3_inv_for_gf180mcu_fd_sc_mcu7t5v0__icgtn_1 );
+	or MGM_BG_2( Q, CLKN, IQ3_inv_for_gf180mcu_fd_sc_mcu7t5v0__icgtn_2 );
 
 endmodule
 `endif // GF180MCU_FD_SC_MCU7T5V0__ICGTN_V

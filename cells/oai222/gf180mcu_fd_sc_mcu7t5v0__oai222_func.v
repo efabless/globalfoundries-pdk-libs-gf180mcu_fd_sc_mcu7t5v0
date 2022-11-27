@@ -15,50 +15,52 @@
 `ifndef GF180MCU_FD_SC_MCU7T5V0__OAI222_V
 `define GF180MCU_FD_SC_MCU7T5V0__OAI222_V
 
+`include "../udp/udp_primitives.v"
+
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu7t5v0__oai222_func( C1, ZN, C2, B1, B2, A1, A2, VDD, VSS );
 inout VDD, VSS;
 `else // If not USE_POWER_PINS
-module gf180mcu_fd_sc_mcu7t5v0__oai222_func( C2, C1, B1, ZN, B2, A2, A1 );
+module gf180mcu_fd_sc_mcu7t5v0__oai222_func( C1, ZN, C2, B1, B2, A1, A2 );
 `endif // If not USE_POWER_PINS
 input A1, A2, B1, B2, C1, C2;
 output ZN;
 
-	wire A1_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_1;
+	wire A1_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_4;
 
-	not MGM_BG_0( A1_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_1, A1 );
+	not MGM_BG_0( A1_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_4, A1 );
 
-	wire A2_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_1;
+	wire A2_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_4;
 
-	not MGM_BG_1( A2_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_1, A2 );
+	not MGM_BG_1( A2_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_4, A2 );
 
 	wire ZN_row1;
 
-	and MGM_BG_2( ZN_row1, A1_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_1, A2_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_1 );
+	and MGM_BG_2( ZN_row1, A1_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_4, A2_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_4 );
 
-	wire B1_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_1;
+	wire B1_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_4;
 
-	not MGM_BG_3( B1_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_1, B1 );
+	not MGM_BG_3( B1_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_4, B1 );
 
-	wire B2_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_1;
+	wire B2_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_4;
 
-	not MGM_BG_4( B2_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_1, B2 );
+	not MGM_BG_4( B2_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_4, B2 );
 
 	wire ZN_row2;
 
-	and MGM_BG_5( ZN_row2, B1_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_1, B2_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_1 );
+	and MGM_BG_5( ZN_row2, B1_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_4, B2_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_4 );
 
-	wire C1_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_1;
+	wire C1_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_4;
 
-	not MGM_BG_6( C1_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_1, C1 );
+	not MGM_BG_6( C1_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_4, C1 );
 
-	wire C2_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_1;
+	wire C2_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_4;
 
-	not MGM_BG_7( C2_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_1, C2 );
+	not MGM_BG_7( C2_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_4, C2 );
 
 	wire ZN_row3;
 
-	and MGM_BG_8( ZN_row3, C1_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_1, C2_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_1 );
+	and MGM_BG_8( ZN_row3, C1_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_4, C2_inv_for_gf180mcu_fd_sc_mcu7t5v0__oai222_4 );
 
 	or MGM_BG_9( ZN, ZN_row1, ZN_row2, ZN_row3 );
 

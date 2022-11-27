@@ -15,6 +15,8 @@
 `ifndef GF180MCU_FD_SC_MCU7T5V0__INVZ_V
 `define GF180MCU_FD_SC_MCU7T5V0__INVZ_V
 
+`include "../udp/udp_primitives.v"
+
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu7t5v0__invz_func( EN, ZN, I, VDD, VSS );
 inout VDD, VSS;
@@ -28,11 +30,11 @@ output ZN;
 
 	wire MGM_WB_1;
 
-	wire I_inv_for_gf180mcu_fd_sc_mcu7t5v0__invz_1;
+	wire I_inv_for_gf180mcu_fd_sc_mcu7t5v0__invz_2;
 
-	not MGM_BG_0( I_inv_for_gf180mcu_fd_sc_mcu7t5v0__invz_1, I );
+	not MGM_BG_0( I_inv_for_gf180mcu_fd_sc_mcu7t5v0__invz_2, I );
 
-	and MGM_BG_1( MGM_WB_0, I_inv_for_gf180mcu_fd_sc_mcu7t5v0__invz_1, EN );
+	and MGM_BG_1( MGM_WB_0, I_inv_for_gf180mcu_fd_sc_mcu7t5v0__invz_2, EN );
 
 	not MGM_BG_2( MGM_WB_1, EN );
 

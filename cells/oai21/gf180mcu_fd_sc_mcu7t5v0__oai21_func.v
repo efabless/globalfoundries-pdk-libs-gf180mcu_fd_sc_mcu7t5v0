@@ -15,6 +15,8 @@
 `ifndef GF180MCU_FD_SC_MCU7T5V0__OAI21_V
 `define GF180MCU_FD_SC_MCU7T5V0__OAI21_V
 
+`include "../udp/udp_primitives.v"
+
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu7t5v0__oai21_func( A2, ZN, A1, B, VDD, VSS );
 inout VDD, VSS;

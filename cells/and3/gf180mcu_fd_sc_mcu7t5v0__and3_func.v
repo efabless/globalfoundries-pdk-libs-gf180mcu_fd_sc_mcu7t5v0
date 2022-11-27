@@ -15,11 +15,13 @@
 `ifndef GF180MCU_FD_SC_MCU7T5V0__AND3_V
 `define GF180MCU_FD_SC_MCU7T5V0__AND3_V
 
+`include "../udp/udp_primitives.v"
+
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu7t5v0__and3_func( A3, A2, A1, Z, VDD, VSS );
 inout VDD, VSS;
 `else // If not USE_POWER_PINS
-module gf180mcu_fd_sc_mcu7t5v0__and3_func( A1, A2, A3, Z );
+module gf180mcu_fd_sc_mcu7t5v0__and3_func( A3, A2, A1, Z );
 `endif // If not USE_POWER_PINS
 input A1, A2, A3;
 output Z;

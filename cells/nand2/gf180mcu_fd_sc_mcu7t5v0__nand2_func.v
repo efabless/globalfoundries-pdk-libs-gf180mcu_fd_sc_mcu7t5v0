@@ -15,24 +15,26 @@
 `ifndef GF180MCU_FD_SC_MCU7T5V0__NAND2_V
 `define GF180MCU_FD_SC_MCU7T5V0__NAND2_V
 
+`include "../udp/udp_primitives.v"
+
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu7t5v0__nand2_func( A1, A2, ZN, VDD, VSS );
 inout VDD, VSS;
 `else // If not USE_POWER_PINS
-module gf180mcu_fd_sc_mcu7t5v0__nand2_func( A2, A1, ZN );
+module gf180mcu_fd_sc_mcu7t5v0__nand2_func( A1, A2, ZN );
 `endif // If not USE_POWER_PINS
 input A1, A2;
 output ZN;
 
-	wire A1_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand2_1;
+	wire A1_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand2_4;
 
-	not MGM_BG_0( A1_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand2_1, A1 );
+	not MGM_BG_0( A1_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand2_4, A1 );
 
-	wire A2_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand2_1;
+	wire A2_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand2_4;
 
-	not MGM_BG_1( A2_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand2_1, A2 );
+	not MGM_BG_1( A2_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand2_4, A2 );
 
-	or MGM_BG_2( ZN, A1_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand2_1, A2_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand2_1 );
+	or MGM_BG_2( ZN, A1_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand2_4, A2_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand2_4 );
 
 endmodule
 `endif // GF180MCU_FD_SC_MCU7T5V0__NAND2_V
