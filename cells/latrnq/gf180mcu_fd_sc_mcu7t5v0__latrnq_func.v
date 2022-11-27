@@ -15,8 +15,6 @@
 `ifndef GF180MCU_FD_SC_MCU7T5V0__LATRNQ_V
 `define GF180MCU_FD_SC_MCU7T5V0__LATRNQ_V
 
-`include "../udp/udp_primitives.v"
-
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu7t5v0__latrnq_func( E, D, RN, Q, VDD, VSS, notifier );
 inout VDD, VSS;
