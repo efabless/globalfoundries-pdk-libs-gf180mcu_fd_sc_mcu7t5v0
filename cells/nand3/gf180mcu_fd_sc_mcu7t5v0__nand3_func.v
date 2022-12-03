@@ -39,4 +39,4 @@ output ZN;
 	or MGM_BG_3( ZN, A1_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand3_2, A2_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand3_2, A3_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand3_2 );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU7T5V0__NAND3_V
+`endif // GF180MCU_FD_SC_MCU7T5V0__NAND3_FUNC_V
