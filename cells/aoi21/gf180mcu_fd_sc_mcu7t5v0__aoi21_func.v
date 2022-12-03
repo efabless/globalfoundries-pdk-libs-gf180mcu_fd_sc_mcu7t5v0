@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-`ifndef GF180MCU_FD_SC_MCU7T5V0__AOI21_V
-`define GF180MCU_FD_SC_MCU7T5V0__AOI21_V
+`ifndef GF180MCU_FD_SC_MCU7T5V0__AOI21_FUNC_V
+`define GF180MCU_FD_SC_MCU7T5V0__AOI21_FUNC_V
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu7t5v0__aoi21_func( A2, A1, ZN, B, VDD, VSS );
@@ -47,4 +47,4 @@ output ZN;
 	or MGM_BG_5( ZN, ZN_row1, ZN_row2 );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU7T5V0__AOI21_V
+`endif // GF180MCU_FD_SC_MCU7T5V0__AOI21_FUNC_V

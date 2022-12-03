@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-`ifndef GF180MCU_FD_SC_MCU7T5V0__CLKINV_V
-`define GF180MCU_FD_SC_MCU7T5V0__CLKINV_V
+`ifndef GF180MCU_FD_SC_MCU7T5V0__CLKINV_FUNC_V
+`define GF180MCU_FD_SC_MCU7T5V0__CLKINV_FUNC_V
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu7t5v0__clkinv_func( I, ZN, VDD, VSS );
@@ -27,4 +27,4 @@ output ZN;
 	not MGM_BG_0( ZN, I );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU7T5V0__CLKINV_V
+`endif // GF180MCU_FD_SC_MCU7T5V0__CLKINV_FUNC_V

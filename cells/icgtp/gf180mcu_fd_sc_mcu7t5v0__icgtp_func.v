@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-`ifndef GF180MCU_FD_SC_MCU7T5V0__ICGTP_V
-`define GF180MCU_FD_SC_MCU7T5V0__ICGTP_V
+`ifndef GF180MCU_FD_SC_MCU7T5V0__ICGTP_FUNC_V
+`define GF180MCU_FD_SC_MCU7T5V0__ICGTP_FUNC_V
 
 `include "../../models/udp_n_iq_latch/gf180mcu_fd_sc_mcu7t5v0__udp_n_iq_latch.v"
 
@@ -35,4 +35,4 @@ output Q;
 	and MGM_BG_2( Q, CLK, IQ2 );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU7T5V0__ICGTP_V
+`endif // GF180MCU_FD_SC_MCU7T5V0__ICGTP_FUNC_V

@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-`ifndef GF180MCU_FD_SC_MCU7T5V0__NAND4_V
-`define GF180MCU_FD_SC_MCU7T5V0__NAND4_V
+`ifndef GF180MCU_FD_SC_MCU7T5V0__NAND4_FUNC_V
+`define GF180MCU_FD_SC_MCU7T5V0__NAND4_FUNC_V
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu7t5v0__nand4_func( A3, ZN, A4, A1, A2, VDD, VSS );
@@ -43,4 +43,4 @@ output ZN;
 	or MGM_BG_4( ZN, A1_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand4_4, A2_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand4_4, A3_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand4_4, A4_inv_for_gf180mcu_fd_sc_mcu7t5v0__nand4_4 );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU7T5V0__NAND4_V
+`endif // GF180MCU_FD_SC_MCU7T5V0__NAND4_FUNC_V

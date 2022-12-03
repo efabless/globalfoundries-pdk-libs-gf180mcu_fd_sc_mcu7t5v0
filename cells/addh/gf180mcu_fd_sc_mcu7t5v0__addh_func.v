@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-`ifndef GF180MCU_FD_SC_MCU7T5V0__ADDH_V
-`define GF180MCU_FD_SC_MCU7T5V0__ADDH_V
+`ifndef GF180MCU_FD_SC_MCU7T5V0__ADDH_FUNC_V
+`define GF180MCU_FD_SC_MCU7T5V0__ADDH_FUNC_V
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu7t5v0__addh_func( CO, A, B, S, VDD, VSS );
@@ -45,4 +45,4 @@ output CO, S;
 	or MGM_BG_5( S, S_row1, S_row2 );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU7T5V0__ADDH_V
+`endif // GF180MCU_FD_SC_MCU7T5V0__ADDH_FUNC_V

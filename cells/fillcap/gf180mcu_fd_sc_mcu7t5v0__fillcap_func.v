@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-`ifndef GF180MCU_FD_SC_MCU7T5V0__FILLCAP_V
-`define GF180MCU_FD_SC_MCU7T5V0__FILLCAP_V
+`ifndef GF180MCU_FD_SC_MCU7T5V0__FILLCAP_FUNC_V
+`define GF180MCU_FD_SC_MCU7T5V0__FILLCAP_FUNC_V
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu7t5v0__fillcap_func( VDD, VSS );
@@ -23,4 +23,4 @@ module gf180mcu_fd_sc_mcu7t5v0__fillcap_func(  );
 `endif // If not USE_POWER_PINS
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU7T5V0__FILLCAP_V
+`endif // GF180MCU_FD_SC_MCU7T5V0__FILLCAP_FUNC_V

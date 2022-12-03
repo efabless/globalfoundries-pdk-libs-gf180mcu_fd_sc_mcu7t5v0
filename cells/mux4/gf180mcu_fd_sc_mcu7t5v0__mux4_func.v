@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-`ifndef GF180MCU_FD_SC_MCU7T5V0__MUX4_V
-`define GF180MCU_FD_SC_MCU7T5V0__MUX4_V
+`ifndef GF180MCU_FD_SC_MCU7T5V0__MUX4_FUNC_V
+`define GF180MCU_FD_SC_MCU7T5V0__MUX4_FUNC_V
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu7t5v0__mux4_func( I2, S0, I3, Z, S1, I1, I0, VDD, VSS );
@@ -51,4 +51,4 @@ output Z;
 	or MGM_BG_6( Z, Z_row1, Z_row2, Z_row3, Z_row4 );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU7T5V0__MUX4_V
+`endif // GF180MCU_FD_SC_MCU7T5V0__MUX4_FUNC_V
