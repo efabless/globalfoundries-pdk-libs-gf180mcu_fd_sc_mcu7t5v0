@@ -25,6 +25,7 @@ module gf180mcu_fd_sc_mcu7t5v0__latrnq_4( E, D, RN, Q );
 `endif // If not USE_POWER_PINS
 input D, E, RN;
 output Q;
+reg notifier;
 
 `ifdef USE_POWER_PINS
   gf180mcu_fd_sc_mcu7t5v0__latrnq_func gf180mcu_fd_sc_mcu7t5v0__latrnq_inst(.E(E),.D(D),.RN(RN),.Q(Q),.VDD(VDD),.VSS(VSS),.notifier(notifier));
